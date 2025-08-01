@@ -83,3 +83,6 @@ Subnet Mask A subnet mask is a 32-bit number used to divide an IP address into n
 It looks similar to an IP address, e.g., 255.255.255.0.
 
 The bits set to 1 correspond to the network part; bits set to 0 correspond to the host part.
+
+Day 4 
+Assignment review
