@@ -1,0 +1,85 @@
+Day 1
+welcome to Ethical Hacking Learned Github basics
+
+Day 2
+how to download kali linux in computer,extracting and install how tio download virtualbox in computer,extracting and install
+
+Day 3
+command lines:Example on nmap and Basics. TARGET SPECIFICATION -iL : Input target list from a file nmap -iL targets.txt Scenario: You have multiple IPs or domains in a file (targets.txt) and want to scan all of them at once.
+
+HOST DISCOVERY -sL: List Scan – list targets only nmap -sL zero.webappsecurity.com Scenario: Just check the hostname resolution for review, without scanning ports.
+-sn: Ping Scan – check if host is up, no ports scanned nmap -sn zero.webappsecurity.com Scenario: Confirm if the host is live before deeper scanning.
+
+-Pn: Assume host is up, skip ping check nmap -Pn zero.webappsecurity.com Scenario: Use when host blocks ICMP/ping (still want port scan).
+
+SCAN TECHNIQUES -sS: TCP SYN scan (stealth scan) nmap -sS zero.webappsecurity.com Scenario: Identify open ports without completing TCP handshake.
+-sT: TCP connect scan nmap -sT zero.webappsecurity.com Scenario: Useful if you're running as a normal user (non-root).
+
+-sA: ACK scan nmap -sA zero.webappsecurity.com Scenario: Check firewall rules or filtering behavior.
+
+-sU: UDP scan nmap -sU zero.webappsecurity.com Scenario: Identify open UDP services (like DNS, SNMP).
+
+PORT SPECIFICATION AND SCAN ORDER -p : Scan specific ports nmap -p 80,443 zero.webappsecurity.com Scenario: Limit scan to known web service ports.
+--exclude-ports : Skip specific ports nmap --exclude-ports 22,25 zero.webappsecurity.com Scenario: Avoid scanning SSH and mail ports.
+
+-F: Fast scan (limited ports) nmap -F zero.webappsecurity.com Scenario: Quick scan of the most common ports.
+
+-r: Scan ports sequentially nmap -r zero.webappsecurity.com Scenario: Avoid randomization for analysis or teaching purposes.
+
+SERVICE/VERSION DETECTION -sV: Detect service versions nmap -sV zero.webappsecurity.com Scenario: Understand what software/version is running on open ports.
+--version-intensity nmap -sV --version-intensity 2 zero.webappsecurity.com Scenario: Perform lighter version detection to avoid detection.
+
+--version-light nmap -sV --version-light zero.webappsecurity.com Scenario: Use the most common probes only.
+
+--version-all nmap -sV --version-all zero.webappsecurity.com Scenario: Perform a full and deep version probe.
+
+--version-trace nmap -sV --version-trace zero.webappsecurity.com Scenario: See how Nmap tries to identify each service.
+
+SCRIPT SCAN -sC: Run default scripts nmap -sC zero.webappsecurity.com Scenario: Run built-in checks (like SSH version, HTTP headers).
+--script=<script>: Run specific NSE script nmap --script=http-title zero.webappsecurity.com Scenario: Extract the page title from the site (simple recon).
+
+TIMING AND PERFORMANCE -T<0-5>: Set timing (0 = paranoid, 5 = insane) nmap -T4 zero.webappsecurity.com Scenario: Faster scan suitable for internal testing.
+
+OS DETECTION -O: Try to identify OS nmap -O zero.webappsecurity.com Scenario: Helps understand what operating system is running (Linux/Windows).
+
+OUTPUT OPTIONS -oN, -oX, -oS, -oG: Output formats nmap -oN nmap_scan.txt zero.webappsecurity.com Scenario: Save your scan result to a file.
+
+-v, -vv, -vvv: Increase verbosity nmap -vv zero.webappsecurity.com Scenario: Useful during live scans for detailed output.
+
+MISCELLANEOUS -A: Aggressive mode (OS detect, version, scripts, traceroute) nmap -A zero.webappsecurity.com Scenario: Perform an all-in-one detailed scan for beginners to understand capabilities.
+Purpose This collection is part of a broader cybersecurity knowledge base tailored for:
+
+SOC Analysts (L1) Vulnerability Assessors & Penetration Testers (L2) Advanced Red/Blue Team Practitioners (L3) Stay tuned as more tools and tactical references will be added to this repository in future releases.
+
+"Master the command-line, master the network."
+
+Day 4
+ETHICAL HACKING in Networking
+
+IP Address An IP address is a unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.
+It identifies both the host (device) and the network it belongs to.
+
+Example (IPv4): 192.168.1.10
+
+It is typically written as four decimal numbers separated by dots (called dotted-decimal notation).
+
+Each number ranges from 0 to 255.
+
+Network A network is a collection of devices connected together to share resources and communicate.
+In IP addressing, the network part of an IP address identifies the specific network.
+
+Devices on the same network can communicate directly.
+
+The network address is derived by applying a subnet mask to an IP address.
+
+Subnet A subnet (subnetwork) is a logical subdivision of an IP network.
+Subnetting divides a large network into smaller, more manageable pieces.
+
+It improves routing efficiency and enhances security.
+
+Subnetting is done by using a subnet mask which separates the network part and the host part of an IP address.
+
+Subnet Mask A subnet mask is a 32-bit number used to divide an IP address into network and host parts.
+It looks similar to an IP address, e.g., 255.255.255.0.
+
+The bits set to 1 correspond to the network part; bits set to 0 correspond to the host part.
